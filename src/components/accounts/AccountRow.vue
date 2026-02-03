@@ -90,12 +90,13 @@ const passwordInputClass = computed(() => getInputClass(passwordError.value))
   <tr class="border-b border-gray-200 hover:bg-gray-50">
     <!-- метки -->
     <td class="px-4 py-3">
-      <input
-        type="text"
+      <textarea
         v-model="localLabel"
         @blur="saveAccount"
         placeholder="Метка1; Метка2; Метка3"
-        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        rows="2"
+        class="block w-full px-3 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-xs"
+        name="lockalLabel"
       />
     </td>
 
@@ -105,6 +106,7 @@ const passwordInputClass = computed(() => getInputClass(passwordError.value))
         :value="account.type"
         @change="handleTypeChange(($event.target as HTMLSelectElement).value as AccountType)"
         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        name="accountType"
       >
         <option value="local">Локальная</option>
         <option value="ldap">LDAP</option>
@@ -119,6 +121,7 @@ const passwordInputClass = computed(() => getInputClass(passwordError.value))
         @blur="saveAccount"
         placeholder="Логин"
         :class="loginInputClass"
+        name="loginInput"
       />
     </td>
 
@@ -130,6 +133,7 @@ const passwordInputClass = computed(() => getInputClass(passwordError.value))
         @blur="saveAccount"
         placeholder="Пароль"
         :class="passwordInputClass"
+        name="passwordInput"
       />
     </td>
 

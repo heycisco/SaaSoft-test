@@ -7,14 +7,14 @@ export const useAccountsStore = defineStore('accounts', () => {
   const accounts = ref<Account[]>([
     {
       id: '1',
-      label: [{ text: 'Администратор' }, { text: 'Главный' }],
+      label: [{ text: 'Администратор' }, { text: 'Главный' }, { text: 'Ещё метка' }],
       type: 'local',
       login: 'admin',
       password: 'admin123',
     },
     {
       id: '2',
-      label: [{ text: 'Администратор' }, { text: 'Главный' }],
+      label: [{ text: 'Пользователь' }],
       type: 'local',
       login: 'user1',
       password: 'user123',
