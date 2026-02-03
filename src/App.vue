@@ -1,11 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AccountsTable from './components/accounts/AccountsTable.vue'
+</script>
 
 <template>
-  <h1 class="text-3xl font-bold">You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="min-h-screen bg-gray-50 py-8">
+    <AccountsTable />
+  </div>
 </template>
 
 <style scoped lang="scss"></style>
